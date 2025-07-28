@@ -31,6 +31,7 @@
 </div>
 
 
+
 <!-- 프로그래머스 통계는 API나 웹 스크래핑을 통해 동적으로 업데이트됩니다 -->
 
 <div align="center">
@@ -38,10 +39,10 @@
     
     <!-- 프로그래머스 뱃지들 -->
     <div>
-        <img src="https://img.shields.io/badge/Programmers-Level 2-00B4AB?style=for-the-badge&logo=programmers&logoColor=white" alt="Programmers Level" />
-        <img src="https://img.shields.io/badge/Solved-45%20Problems-4CAF50?style=for-the-badge&logo=leetcode&logoColor=white" alt="Solved Problems" />
-        <img src="https://img.shields.io/badge/Score-1250-FF6B6B?style=for-the-badge&logo=javascript&logoColor=white" alt="Score" />
-        <img src="https://img.shields.io/badge/Rank-1234-9C27B0?style=for-the-badge&logo=github&logoColor=white" alt="Rank" />
+        <img src="https://img.shields.io/badge/Programmers-Level 1-00B4AB?style=for-the-badge&logo=programmers&logoColor=white" alt="Programmers Level" />
+        <img src="https://img.shields.io/badge/Solved-0%20Problems-4CAF50?style=for-the-badge&logo=leetcode&logoColor=white" alt="Solved Problems" />
+        <img src="https://img.shields.io/badge/Score-0-FF6B6B?style=for-the-badge&logo=javascript&logoColor=white" alt="Score" />
+        <img src="https://img.shields.io/badge/Rank-9999-9C27B0?style=for-the-badge&logo=github&logoColor=white" alt="Rank" />
     </div>
     
     <!-- 상세 통계 테이블 -->
@@ -52,19 +53,19 @@
         </tr>
         <tr>
             <td><strong>레벨:</strong></td>
-            <td>Level 2</td>
+            <td>Level 1</td>
         </tr>
         <tr>
             <td><strong>푼 문제:</strong></td>
-            <td>45문제</td>
+            <td>0문제</td>
         </tr>
         <tr>
             <td><strong>점수:</strong></td>
-            <td>1250점</td>
+            <td>0점</td>
         </tr>
         <tr>
             <td><strong>등수:</strong></td>
-            <td>1234위</td>
+            <td>9999위</td>
         </tr>
     </table>
     
@@ -74,7 +75,7 @@
         <a href="https://programmers.co.kr/learn/courses">프로그래밍 강의</a> | 
         <a href="https://programmers.co.kr/learn/me">내 학습</a>
     </p>
-    <p><em>마지막 업데이트: 2025-07-28 13:33:45</em></p>
+    <p><em>마지막 업데이트: 2025-07-28 13:35:43</em></p>
 </div>
 ## 📈 최근 활동
 
