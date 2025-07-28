@@ -1,4 +1,4 @@
-# 👋 안녕하세요! 저는 개발자입니다
+# 👋 장천명
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=4F8CC9&center=true&vCenter=true&width=435&lines=Hello%2C+I'm+a+Developer!;%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94!;%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9E%85%EB%8B%88%EB%8B%A4!" alt="Typing SVG" />
