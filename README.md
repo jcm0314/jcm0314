@@ -30,53 +30,48 @@
   </a>
 </div>
 
-
-
 <!-- 프로그래머스 통계는 API나 웹 스크래핑을 통해 동적으로 업데이트됩니다 -->
 
-<div align="center">
-    <h3>🏆 프로그래머스 랭킹</h3>
-    
-    <!-- 프로그래머스 뱃지들 -->
-    <div>
-        <img src="https://img.shields.io/badge/Programmers-Level 1-00B4AB?style=for-the-badge&logo=programmers&logoColor=white" alt="Programmers Level" />
-        <img src="https://img.shields.io/badge/Solved-0%20Problems-4CAF50?style=for-the-badge&logo=leetcode&logoColor=white" alt="Solved Problems" />
-        <img src="https://img.shields.io/badge/Score-0-FF6B6B?style=for-the-badge&logo=javascript&logoColor=white" alt="Score" />
-        <img src="https://img.shields.io/badge/Rank-9999-9C27B0?style=for-the-badge&logo=github&logoColor=white" alt="Rank" />
+    <div align="center">
+        <h3>🏆 프로그래머스 코딩 테스트 현황</h3>
+        
+        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
+            <img src="https://img.shields.io/badge/Level-3단계-00B4AB?style=for-the-badge&logo=programmers&logoColor=white" alt="Level" />
+            <img src="https://img.shields.io/badge/Problems-260-4F8CC9?style=for-the-badge" alt="Total Problems" />
+            <img src="https://img.shields.io/badge/Streak-진행중-FF6B6B?style=for-the-badge" alt="Current Streak" />
+            <img src="https://img.shields.io/badge/Goal-매일%204문제-28A745?style=for-the-badge" alt="Daily Goal" />
+        </div>
+        
+        <table align="center" style="border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>📅 학습 기간:</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">2024.09.26 ~ 현재</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>🎯 현재 목표:</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">매일 4문제</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>💻 사용 언어:</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Python, Java, C++, C</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>📊 총 문제 수:</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">260문제</td>
+            </tr>
+        </table>
+        
+        <div style="margin: 20px 0;">
+            <a href="https://github.com/jcm0314/CodingTestStudy">
+                <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Repository" />
+            </a>
+        </div>
+        
+        <p style="font-size: 12px; color: #666; margin-top: 20px;">
+            <em>마지막 업데이트: 2025-07-28 13:50:56</em>
+        </p>
     </div>
     
-    <!-- 상세 통계 테이블 -->
-    <table>
-        <tr>
-            <td><strong>사용자명:</strong></td>
-            <td>jcm0314</td>
-        </tr>
-        <tr>
-            <td><strong>레벨:</strong></td>
-            <td>Level 1</td>
-        </tr>
-        <tr>
-            <td><strong>푼 문제:</strong></td>
-            <td>0문제</td>
-        </tr>
-        <tr>
-            <td><strong>점수:</strong></td>
-            <td>0점</td>
-        </tr>
-        <tr>
-            <td><strong>등수:</strong></td>
-            <td>9999위</td>
-        </tr>
-    </table>
-    
-    <h4>📝 프로그래머스 링크</h4>
-    <p>
-        <a href="https://programmers.co.kr/learn/challenges">코딩테스트 연습</a> | 
-        <a href="https://programmers.co.kr/learn/courses">프로그래밍 강의</a> | 
-        <a href="https://programmers.co.kr/learn/me">내 학습</a>
-    </p>
-    <p><em>마지막 업데이트: 2025-07-28 13:35:43</em></p>
-</div>
 ## 📈 최근 활동
 
 <div align="center">

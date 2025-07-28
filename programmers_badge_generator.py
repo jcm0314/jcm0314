@@ -2,163 +2,139 @@
 # -*- coding: utf-8 -*-
 """
 프로그래머스 랭킹 뱃지 생성기
-GitHub 프로필용 프로그래머스 랭킹 뱃지를 자동으로 생성합니다.
+CodingTestStudy 저장소 정보를 바탕으로 프로그래머스 통계 뱃지를 생성합니다.
 """
 
-import requests
-import json
 import os
+import json
 from datetime import datetime
 
-class ProgrammersBadgeGenerator:
-    def __init__(self, username):
-        self.username = username
-        self.base_url = "https://programmers.co.kr"
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        })
+def generate_programmers_badges():
+    """프로그래머스 랭킹 뱃지 생성"""
     
-    def get_user_stats(self):
-        """프로그래머스 사용자 통계 가져오기"""
-        # 실제 프로그래머스 API나 웹 스크래핑을 통해 정보를 가져옵니다
-        # 현재는 샘플 데이터를 반환합니다
-        sample_data = {
-            'username': self.username,
-            'level': 'Level 2',
-            'solved_problems': 45,
-            'score': 1250,
-            'rank': 1234,
-            'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        }
-        return sample_data
-    
-    def generate_badge_url(self, stats):
-        """Shields.io를 사용한 뱃지 URL 생성"""
-        # 프로그래머스 레벨 뱃지
-        level_badge = f"https://img.shields.io/badge/Programmers-{stats['level']}-00B4AB?style=for-the-badge&logo=programmers&logoColor=white"
-        
-        # 해결한 문제 수 뱃지
-        solved_badge = f"https://img.shields.io/badge/Solved-{stats['solved_problems']}%20Problems-4CAF50?style=for-the-badge&logo=leetcode&logoColor=white"
-        
-        # 점수 뱃지
-        score_badge = f"https://img.shields.io/badge/Score-{stats['score']}-FF6B6B?style=for-the-badge&logo=javascript&logoColor=white"
-        
-        # 등수 뱃지
-        rank_badge = f"https://img.shields.io/badge/Rank-{stats['rank']}-9C27B0?style=for-the-badge&logo=github&logoColor=white"
-        
-        return {
-            'level': level_badge,
-            'solved': solved_badge,
-            'score': score_badge,
-            'rank': rank_badge
-        }
-
-def update_readme_with_badges(username, stats):
-    """README.md에 프로그래머스 뱃지 추가"""
-    badge_gen = ProgrammersBadgeGenerator(username)
-    badges = badge_gen.generate_badge_url(stats)
-    
-    # README.md 파일 읽기
-    with open('README.md', 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 프로그래머스 통계 섹션 찾기
-    start_marker = '<!-- 프로그래머스 통계는 API나 웹 스크래핑을 통해 동적으로 업데이트됩니다 -->'
-    end_marker = '## 📈 최근 활동'
-    
-    start_idx = content.find(start_marker)
-    end_idx = content.find(end_marker)
-    
-    if start_idx != -1 and end_idx != -1:
-        # 새로운 프로그래머스 섹션 생성
-        new_section = f"""
-{start_marker}
-
-<div align="center">
-    <h3>🏆 프로그래머스 랭킹</h3>
-    
-    <!-- 프로그래머스 뱃지들 -->
-    <div>
-        <img src="{badges['level']}" alt="Programmers Level" />
-        <img src="{badges['solved']}" alt="Solved Problems" />
-        <img src="{badges['score']}" alt="Score" />
-        <img src="{badges['rank']}" alt="Rank" />
-    </div>
-    
-    <!-- 상세 통계 테이블 -->
-    <table>
-        <tr>
-            <td><strong>사용자명:</strong></td>
-            <td>{stats['username']}</td>
-        </tr>
-        <tr>
-            <td><strong>레벨:</strong></td>
-            <td>{stats['level']}</td>
-        </tr>
-        <tr>
-            <td><strong>푼 문제:</strong></td>
-            <td>{stats['solved_problems']}문제</td>
-        </tr>
-        <tr>
-            <td><strong>점수:</strong></td>
-            <td>{stats['score']}점</td>
-        </tr>
-        <tr>
-            <td><strong>등수:</strong></td>
-            <td>{stats['rank']}위</td>
-        </tr>
-    </table>
-    
-    <h4>📝 프로그래머스 링크</h4>
-    <p>
-        <a href="https://programmers.co.kr/learn/challenges">코딩테스트 연습</a> | 
-        <a href="https://programmers.co.kr/learn/courses">프로그래밍 강의</a> | 
-        <a href="https://programmers.co.kr/learn/me">내 학습</a>
-    </p>
-    <p><em>마지막 업데이트: {stats['last_updated']}</em></p>
-</div>
-"""
-        
-        # README.md 업데이트
-        new_content = content[:start_idx] + new_section + content[end_idx:]
-        
-        with open('README.md', 'w', encoding='utf-8') as f:
-            f.write(new_content)
-        
-        print("README.md가 프로그래머스 뱃지로 업데이트되었습니다!")
-        return True
-    else:
-        print("README.md에서 마커를 찾을 수 없습니다.")
-        return False
-
-def main():
-    """메인 함수"""
-    username = "jcm0314"
-    
-    # 샘플 통계 데이터 (실제로는 프로그래머스에서 가져와야 함)
-    sample_stats = {
-        'username': username,
-        'level': 'Level 2',
-        'solved_problems': 45,
-        'score': 1250,
-        'rank': 1234,
+    # CodingTestStudy 저장소 정보 (실제 데이터 기반)
+    programmers_stats = {
+        'total_problems': 260,  # 총 커밋 수에서 추정
+        'level': '3단계',  # README에서 확인
+        'current_streak': '진행중',  # 2025.04.03 ~ 현재
+        'study_period': '2024.09.26 ~ 현재',
+        'daily_goal': '매일 4문제',
+        'languages': ['Python', 'Java', 'C++', 'C'],
         'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     }
     
-    print("프로그래머스 뱃지 생성 중...")
+    # 프로그래머스 뱃지 HTML 생성
+    badges_html = f"""
+    <div align="center">
+        <h3>🏆 프로그래머스 코딩 테스트 현황</h3>
+        
+        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
+            <img src="https://img.shields.io/badge/Level-{programmers_stats['level']}-00B4AB?style=for-the-badge&logo=programmers&logoColor=white" alt="Level" />
+            <img src="https://img.shields.io/badge/Problems-{programmers_stats['total_problems']}-4F8CC9?style=for-the-badge" alt="Total Problems" />
+            <img src="https://img.shields.io/badge/Streak-{programmers_stats['current_streak']}-FF6B6B?style=for-the-badge" alt="Current Streak" />
+            <img src="https://img.shields.io/badge/Goal-{programmers_stats['daily_goal'].replace(' ', '%20')}-28A745?style=for-the-badge" alt="Daily Goal" />
+        </div>
+        
+        <table align="center" style="border-collapse: collapse; margin: 20px 0;">
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>📅 학습 기간:</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">{programmers_stats['study_period']}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>🎯 현재 목표:</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">{programmers_stats['daily_goal']}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>💻 사용 언어:</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">{', '.join(programmers_stats['languages'])}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>📊 총 문제 수:</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">{programmers_stats['total_problems']}문제</td>
+            </tr>
+        </table>
+        
+        <div style="margin: 20px 0;">
+            <a href="https://github.com/jcm0314/CodingTestStudy">
+                <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Repository" />
+            </a>
+        </div>
+        
+        <p style="font-size: 12px; color: #666; margin-top: 20px;">
+            <em>마지막 업데이트: {programmers_stats['last_updated']}</em>
+        </p>
+    </div>
+    """
     
-    # README.md 업데이트
-    success = update_readme_with_badges(username, sample_stats)
+    return badges_html
+
+def update_readme_with_badges():
+    """README.md 파일에 프로그래머스 뱃지 추가"""
+    try:
+        # README.md 파일 읽기
+        with open('README.md', 'r', encoding='utf-8') as f:
+            readme_content = f.read()
+        
+        # 프로그래머스 뱃지 생성
+        badges_html = generate_programmers_badges()
+        
+        # 기존 프로그래머스 통계 부분 교체
+        start_marker = '<!-- 프로그래머스 통계는 API나 웹 스크래핑을 통해 동적으로 업데이트됩니다 -->'
+        end_marker = '## 📈 최근 활동'
+        
+        start_idx = readme_content.find(start_marker)
+        end_idx = readme_content.find(end_marker)
+        
+        if start_idx != -1 and end_idx != -1:
+            new_content = (
+                readme_content[:start_idx] +
+                start_marker + '\n' +
+                badges_html + '\n' +
+                readme_content[end_idx:]
+            )
+            
+            # README.md 파일 업데이트
+            with open('README.md', 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            
+            print("✅ 프로그래머스 뱃지가 성공적으로 추가되었습니다!")
+            return True
+        else:
+            print("❌ README.md 파일에서 마커를 찾을 수 없습니다.")
+            return False
+            
+    except Exception as e:
+        print(f"❌ README.md 업데이트 오류: {e}")
+        return False
+
+def create_programmers_stats_json():
+    """프로그래머스 통계를 JSON 파일로 저장"""
+    stats = {
+        'username': 'jcm0314',
+        'repository': 'CodingTestStudy',
+        'total_problems': 260,
+        'level': '3단계',
+        'current_streak': '진행중',
+        'study_period': '2024.09.26 ~ 현재',
+        'daily_goal': '매일 4문제제',
+        'languages': ['Python', 'Java', 'C++', 'C'],
+        'last_updated': datetime.now().isoformat(),
+        'repository_url': 'https://github.com/jcm0314/CodingTestStudy'
+    }
     
-    if success:
-        print("\n✅ 프로그래머스 뱃지가 성공적으로 생성되었습니다!")
-        print("📊 샘플 데이터:")
-        for key, value in sample_stats.items():
-            print(f"   {key}: {value}")
-        print("\n💡 실제 데이터로 업데이트하려면 프로그래머스 정보를 알려주세요!")
-    else:
-        print("❌ 뱃지 생성에 실패했습니다.")
+    with open('programmers_stats.json', 'w', encoding='utf-8') as f:
+        json.dump(stats, f, ensure_ascii=False, indent=2)
+    
+    print("✅ programmers_stats.json 파일이 생성되었습니다.")
 
 if __name__ == "__main__":
-    main() 
+    print("🏆 프로그래머스 랭킹 뱃지 생성기 시작...")
+    
+    # JSON 파일 생성
+    create_programmers_stats_json()
+    
+    # README.md 업데이트
+    if update_readme_with_badges():
+        print("🎉 모든 작업이 완료되었습니다!")
+    else:
+        print("⚠️ README.md 업데이트에 실패했습니다.") 

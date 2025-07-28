@@ -1,4 +1,4 @@
-name: Auto Update Programmers Badges
+name: Update Programmers Stats
 
 on:
   schedule:
@@ -7,14 +7,12 @@ on:
   workflow_dispatch: # 수동 실행 가능
 
 jobs:
-  update-badges:
+  update-stats:
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -26,18 +24,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
-    - name: Auto Update Programmers Badges
+    - name: Update Programmers Badges
       run: |
-        python auto_update_badges.py
+        python programmers_badge_generator.py
       env:
         PROGRAMMERS_USERNAME: ${{ secrets.PROGRAMMERS_USERNAME }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Commit and push changes
-      if: success()
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add README.md
-        git diff --quiet && git diff --staged --quiet || git commit -m "Auto update programmers badges [skip ci]"
+        git add README.md programmers_stats.json
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update programmers badges [skip ci]"
         git push 
