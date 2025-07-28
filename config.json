@@ -1,0 +1,29 @@
+{
+  "programmers": {
+    "username": "your_programmers_username",
+    "update_interval_hours": 24
+  },
+  "github": {
+    "username": "jcm0314",
+    "repository": "jcm0314"
+  },
+  "contact": {
+    "email": "your.email@example.com",
+    "linkedin": "https://linkedin.com/in/your-profile",
+    "blog": "https://blog.naver.com/your-blog"
+  },
+  "skills": [
+    "JavaScript",
+    "TypeScript", 
+    "React",
+    "Node.js",
+    "Python",
+    "Java"
+  ],
+  "goals": [
+    "프로그래머스 레벨 3 달성",
+    "오픈소스 프로젝트 기여",
+    "기술 블로그 운영",
+    "알고리즘 문제 1000문제 풀이"
+  ]
+} 
