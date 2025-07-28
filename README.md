@@ -41,11 +41,19 @@
             </tr>
             <tr>
                 <td><strong>레벨:</strong></td>
-                <td>업데이트 예정</td>
+                <td>🔍 확인 중...</td>
             </tr>
             <tr>
-                <td><strong>해결한 문제:</strong></td>
-                <td>업데이트 예정</td>
+                <td><strong>푼 문제:</strong></td>
+                <td>🔍 확인 중...</td>
+            </tr>
+            <tr>
+                <td><strong>점수:</strong></td>
+                <td>🔍 확인 중...</td>
+            </tr>
+            <tr>
+                <td><strong>등수:</strong></td>
+                <td>🔍 확인 중...</td>
             </tr>
         </table>
         
