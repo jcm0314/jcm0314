@@ -32,46 +32,36 @@
 
 <!-- 프로그래머스 통계는 API나 웹 스크래핑을 통해 동적으로 업데이트됩니다 -->
 
-    <div align="center">
-        <h3>🏆 프로그래머스 코딩 테스트 현황</h3>
-        
-        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
-            <img src="https://img.shields.io/badge/Level-3단계-00B4AB?style=for-the-badge&logo=programmers&logoColor=white" alt="Level" />
-            <img src="https://img.shields.io/badge/Problems-260-4F8CC9?style=for-the-badge" alt="Total Problems" />
-            <img src="https://img.shields.io/badge/Streak-진행중-FF6B6B?style=for-the-badge" alt="Current Streak" />
-            <img src="https://img.shields.io/badge/Goal-매일%204문제-28A745?style=for-the-badge" alt="Daily Goal" />
-        </div>
-        
-        <table align="center" style="border-collapse: collapse; margin: 20px 0;">
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>📅 학습 기간:</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">2024.09.26 ~ 현재</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>🎯 현재 목표:</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">매일 4문제</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>💻 사용 언어:</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Python, Java, C++, C</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>📊 총 문제 수:</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">260문제</td>
-            </tr>
-        </table>
-        
-        <div style="margin: 20px 0;">
-            <a href="https://github.com/jcm0314/CodingTestStudy">
-                <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Repository" />
-            </a>
-        </div>
-        
-        <p style="font-size: 12px; color: #666; margin-top: 20px;">
-            <em>마지막 업데이트: 2025-07-28 13:50:56</em>
-        </p>
-    </div>
-    
+## 🏆 프로그래머스 코딩 테스트 현황
+
+<div align="center">
+
+![Level](https://img.shields.io/badge/Level-1단계-00B4AB?style=for-the-badge&logo=programmers&logoColor=white)
+![Problems](https://img.shields.io/badge/Problems-260-4F8CC9?style=for-the-badge)
+![Streak](https://img.shields.io/badge/Streak-진행중-FF6B6B?style=for-the-badge)
+![Goal](https://img.shields.io/badge/Goal-1단계%201문제-28A745?style=for-the-badge)
+
+</div>
+
+### 📊 상세 통계
+
+| 항목 | 내용 |
+|------|------|
+| 📅 **학습 기간** | 2024.09.26 ~ 현재 |
+| 🎯 **현재 목표** | 1단계 1문제 |
+| 💻 **사용 언어** | Python, Java, C++, C |
+| 📊 **총 문제 수** | 260문제 |
+
+<div align="center">
+
+[![View Repository](https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jcm0314/CodingTestStudy)
+
+</div>
+
+---
+
+*마지막 업데이트: 2025-07-28 13:53:01*
+
 ## 📈 최근 활동
 
 <div align="center">

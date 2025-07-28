@@ -10,63 +10,53 @@ import json
 from datetime import datetime
 
 def generate_programmers_badges():
-    """프로그래머스 랭킹 뱃지 생성"""
+    """프로그래머스 랭킹 뱃지 생성 (마크다운 형식)"""
     
     # CodingTestStudy 저장소 정보 (실제 데이터 기반)
     programmers_stats = {
         'total_problems': 260,  # 총 커밋 수에서 추정
-        'level': '3단계',  # README에서 확인
+        'level': '1단계',  # README에서 확인
         'current_streak': '진행중',  # 2025.04.03 ~ 현재
         'study_period': '2024.09.26 ~ 현재',
-        'daily_goal': '매일 4문제',
+        'daily_goal': '1단계 1문제',
         'languages': ['Python', 'Java', 'C++', 'C'],
         'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     }
     
-    # 프로그래머스 뱃지 HTML 생성
-    badges_html = f"""
-    <div align="center">
-        <h3>🏆 프로그래머스 코딩 테스트 현황</h3>
-        
-        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
-            <img src="https://img.shields.io/badge/Level-{programmers_stats['level']}-00B4AB?style=for-the-badge&logo=programmers&logoColor=white" alt="Level" />
-            <img src="https://img.shields.io/badge/Problems-{programmers_stats['total_problems']}-4F8CC9?style=for-the-badge" alt="Total Problems" />
-            <img src="https://img.shields.io/badge/Streak-{programmers_stats['current_streak']}-FF6B6B?style=for-the-badge" alt="Current Streak" />
-            <img src="https://img.shields.io/badge/Goal-{programmers_stats['daily_goal'].replace(' ', '%20')}-28A745?style=for-the-badge" alt="Daily Goal" />
-        </div>
-        
-        <table align="center" style="border-collapse: collapse; margin: 20px 0;">
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>📅 학습 기간:</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">{programmers_stats['study_period']}</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>🎯 현재 목표:</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">{programmers_stats['daily_goal']}</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>💻 사용 언어:</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">{', '.join(programmers_stats['languages'])}</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>📊 총 문제 수:</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">{programmers_stats['total_problems']}문제</td>
-            </tr>
-        </table>
-        
-        <div style="margin: 20px 0;">
-            <a href="https://github.com/jcm0314/CodingTestStudy">
-                <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="View Repository" />
-            </a>
-        </div>
-        
-        <p style="font-size: 12px; color: #666; margin-top: 20px;">
-            <em>마지막 업데이트: {programmers_stats['last_updated']}</em>
-        </p>
-    </div>
-    """
+    # 프로그래머스 뱃지 마크다운 생성
+    badges_markdown = f"""
+## 🏆 프로그래머스 코딩 테스트 현황
+
+<div align="center">
+
+![Level](https://img.shields.io/badge/Level-{programmers_stats['level']}-00B4AB?style=for-the-badge&logo=programmers&logoColor=white)
+![Problems](https://img.shields.io/badge/Problems-{programmers_stats['total_problems']}-4F8CC9?style=for-the-badge)
+![Streak](https://img.shields.io/badge/Streak-{programmers_stats['current_streak']}-FF6B6B?style=for-the-badge)
+![Goal](https://img.shields.io/badge/Goal-{programmers_stats['daily_goal'].replace(' ', '%20')}-28A745?style=for-the-badge)
+
+</div>
+
+### 📊 상세 통계
+
+| 항목 | 내용 |
+|------|------|
+| 📅 **학습 기간** | {programmers_stats['study_period']} |
+| 🎯 **현재 목표** | {programmers_stats['daily_goal']} |
+| 💻 **사용 언어** | {', '.join(programmers_stats['languages'])} |
+| 📊 **총 문제 수** | {programmers_stats['total_problems']}문제 |
+
+<div align="center">
+
+[![View Repository](https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jcm0314/CodingTestStudy)
+
+</div>
+
+---
+
+*마지막 업데이트: {programmers_stats['last_updated']}*
+"""
     
-    return badges_html
+    return badges_markdown
 
 def update_readme_with_badges():
     """README.md 파일에 프로그래머스 뱃지 추가"""
@@ -76,7 +66,7 @@ def update_readme_with_badges():
             readme_content = f.read()
         
         # 프로그래머스 뱃지 생성
-        badges_html = generate_programmers_badges()
+        badges_markdown = generate_programmers_badges()
         
         # 기존 프로그래머스 통계 부분 교체
         start_marker = '<!-- 프로그래머스 통계는 API나 웹 스크래핑을 통해 동적으로 업데이트됩니다 -->'
@@ -89,7 +79,7 @@ def update_readme_with_badges():
             new_content = (
                 readme_content[:start_idx] +
                 start_marker + '\n' +
-                badges_html + '\n' +
+                badges_markdown + '\n' +
                 readme_content[end_idx:]
             )
             
@@ -113,10 +103,10 @@ def create_programmers_stats_json():
         'username': 'jcm0314',
         'repository': 'CodingTestStudy',
         'total_problems': 260,
-        'level': '3단계',
+        'level': '1단계',
         'current_streak': '진행중',
         'study_period': '2024.09.26 ~ 현재',
-        'daily_goal': '매일 4문제제',
+        'daily_goal': '1단계 1문제',
         'languages': ['Python', 'Java', 'C++', 'C'],
         'last_updated': datetime.now().isoformat(),
         'repository_url': 'https://github.com/jcm0314/CodingTestStudy'
