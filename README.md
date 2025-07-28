@@ -31,10 +31,33 @@
 </div>
 
 <!-- 프로그래머스 통계는 API나 웹 스크래핑을 통해 동적으로 업데이트됩니다 -->
-<div id="programmers-stats" align="center">
-  <p>프로그래머스 통계 로딩 중...</p>
-</div>
 
+    <div align="center">
+        <h3>🏆 프로그래머스 통계</h3>
+        <table>
+            <tr>
+                <td><strong>사용자명:</strong></td>
+                <td>jcm0314</td>
+            </tr>
+            <tr>
+                <td><strong>레벨:</strong></td>
+                <td>업데이트 예정</td>
+            </tr>
+            <tr>
+                <td><strong>해결한 문제:</strong></td>
+                <td>업데이트 예정</td>
+            </tr>
+        </table>
+        
+        <h4>📝 프로그래머스 링크</h4>
+        <p>
+            <a href="https://programmers.co.kr/learn/challenges">코딩테스트 연습</a> | 
+            <a href="https://programmers.co.kr/learn/courses">프로그래밍 강의</a> | 
+            <a href="https://programmers.co.kr/learn/me">내 학습</a>
+        </p>
+        <p><em>프로그래머스 API 연동 준비 중...</em></p>
+    </div>
+    
 ## 📈 최근 활동
 
 <div align="center">
@@ -52,10 +75,10 @@
 ## 📫 연락처
 
 <div align="center">
-  <a href="mailto:your.email@example.com">
+  <a href="mailto:jcm03141@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://linkedin.com/in/your-profile">
+  <a href="https://www.linkedin.com/in/%EC%B2%9C%EB%AA%85-%EC%9E%A5-186960376/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
   <a href="https://blog.naver.com/your-blog">
