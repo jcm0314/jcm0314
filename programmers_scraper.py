@@ -148,13 +148,13 @@ def generate_programmers_stats_html(profile_data, solutions):
 def update_readme_with_programmers_data():
     """README.md 파일을 프로그래머스 데이터로 업데이트"""
     # 실제 프로그래머스 사용자명으로 변경하세요
-    scraper = ProgrammersScraper('your_programmers_username')
+    scraper = ProgrammersScraper('jcm0314')
     
     # 프로필 정보 가져오기
     profile_data = scraper.get_user_profile()
     if not profile_data:
         profile_data = {
-            'username': 'your_programmers_username',
+            'username': 'jcm0314',
             'level': 'N/A',
             'solved_problems': 0,
             'rank': 'N/A',
