@@ -15,6 +15,26 @@
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
 </div>
 
+## 💼 경력 및 활동
+
+### 🎓 교육
+- **단국대학교** (2020년 입학)
+
+### 🏢 경력
+- **OpenUp** - Ollama 오픈소스 프로젝트 참여
+- **Google Developer Group** - Staff 활동
+
+### 🏆 대회 및 해커톤
+- **서울시 2024 새싹 해커톤** 참여
+- **데이콘 경진대회** - 투자 성공 확률 예측 프로젝트 참여
+- **Kaggle Bike Sharing Demand** 경진대회 참여
+- **Kaggle Plant Pathology 2020** 경진대회 참여
+
+### 📜 자격증
+- **정보처리기사**
+- **SQLD (SQL 개발자)**
+- **TOEIC 900점**
+
 ## 📊 프로그래머스 통계
 
 <div align="center">
