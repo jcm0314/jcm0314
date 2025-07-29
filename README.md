@@ -122,8 +122,8 @@
   <a href="https://www.linkedin.com/in/%EC%B2%9C%EB%AA%85-%EC%9E%A5-186960376/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="https://blog.naver.com/your-blog">
-    <img src="https://img.shields.io/badge/Blog-03C75A?style=for-the-badge&logo=naver&logoColor=white" />
+  <a href="https://velog.io/@jcm0314">
+    <img src="https://img.shields.io/badge/Velog-20C997?style=for-the-badge&logo=velog&logoColor=white" />
   </a>
 </div>
 
