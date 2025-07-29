@@ -91,10 +91,18 @@
 ## 🛠️ 프로젝트
 
 <div align="center">
-  <a href="https://github.com/jcm0314">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=jcm0314&repo=jcm0314&theme=radical" />
+  <a href="https://github.com/jcm0314/Auto_Stock">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=jcm0314&repo=Auto_Stock&theme=radical" />
+  </a>
+  <a href="https://github.com/jcm0314/DKU-Albamate">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=jcm0314&repo=DKU-Albamate&theme=radical" />
   </a>
 </div>
+
+### 📈 주요 프로젝트
+
+- **[Auto_Stock](https://github.com/jcm0314/Auto_Stock)** - 한국투자증권 API를 활용한 자동 주식 거래 시스템
+- **[DKU-Albamate](https://github.com/jcm0314/DKU-Albamate)** - 단국대학교 알바메이트 프로젝트
 
 ## 📫 연락처
 
