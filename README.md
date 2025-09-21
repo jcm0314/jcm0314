@@ -38,6 +38,7 @@
 - **데이콘 경진대회** - 투자 성공 확률 예측 프로젝트 참여
 - **Kaggle Bike Sharing Demand** 경진대회 참여
 - **Kaggle Plant Pathology 2020** 경진대회 참여
+- **AI Agent 개발 <K intelligence 해커톤 2025>** 경진대회 참여
 
 ### 🎓 교육 프로그램
 - **TABA 9기** - TmaxTibero와 과학기술정보통신부 주최 2025 캠퍼스 SW 아카데미 참여
@@ -45,7 +46,9 @@
 ### 📜 자격증
 - **정보처리기사**
 - **SQLD (SQL 개발자)**
+- **ASdP **
 - **TOEIC 900점**
+- **OPIC IH**
 
 
 ## 📊 프로그래머스 통계
