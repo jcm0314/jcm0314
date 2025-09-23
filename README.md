@@ -29,9 +29,9 @@
 ### 🎓 교육
 - **단국대학교 컴퓨터공학과** (2020년 입학, 재학중)
 
-### 🏢 경력
+### 🏢 활동
 - **OpenUp** - Ollama 오픈소스 프로젝트 참여
-- **Google Developer Group** - Staff 활동
+- **Google Developer Group In SongDo** - Staff 활동
 
 ### 🏆 대회 및 해커톤
 - **서울시 2024 새싹 해커톤** 참여
