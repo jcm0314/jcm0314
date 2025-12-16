@@ -45,7 +45,7 @@
 - **오픈소스 컨트리뷰션 아카데미** - LLM JOURNEY with OLLAMA
 ### 📜 자격증
 - **정보처리기사**
-- **SQLD (SQL 개발자)**
+- **SQLD**
 - **ADsP**
 - **TOEIC 900점**
 - **OPIC IH**
